@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import Button from './Button.jsx';
 import './App.css'
 
-
 /*
 Challenge: Your goal is to create sixteen <Button /> components
-Step 1: Run npm i, then npm start, you should see a gray background 
+Step 1: Run yarn, then yarn start, you should see a gray background 
+        If you don't have yarn, run npm install yarn 
 Step 2: Create a loop from 0 to 16 in order to push some buttons to the array
 Step 3: On each iteration, push a <Button /> component to the buttons array
 Step 4: Create a prop called id and assign to it the current value of i
@@ -15,7 +15,7 @@ Step 6: Create three more props: keyCode, keySymbol, and audioFile
         this.state.keySymbols, and this.state.audioFiles arrays, respectively.
 
 BONUS: Let's make our buttons work when we click on them. First, create a 
-       handleKeydown prop on every button and assign to it this.handleKeydown.
+       handleKeydown prop on every button and assign this.handleKeydown to it.
        Now navigate to the Button.jsx file and add an onClick property to the 
        div, assigning to it this.props.handleKeydown (NB: we would usually 
        create a separate click handler method, but since the functionality is 
@@ -68,6 +68,7 @@ class App extends Component {
     const buttons = [];
 
     // ****************** 
+    
 
     return (
       <div className="button-container">
