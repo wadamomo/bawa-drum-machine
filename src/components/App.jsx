@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
 import Button from './Button.jsx';
-import './App.css'
 
 /*
-Challenge: Your goal is to create sixteen <Button /> components
-Step 1: Run yarn, then yarn start, you should see a gray background 
-        If you don't have yarn, run npm install yarn 
-Step 2: Create a loop from 0 to 16 in order to push some buttons to the array
-Step 3: On each iteration, push a <Button /> component to the buttons array
-Step 4: Create a prop called id and assign to it the current value of i
-Step 5: Create a prop called key and assign to it the current value of i
-Step 6: Create three more props: keyCode, keySymbol, and audioFile
+
+Step 1: To make sure everything is hooked up properly, first render a 
+        <Button /> by putting one in the buttons array like so [<Button />]. 
+        Now put a few more in there. How is this working? 🤔 Have a look
+        at the Button.jsx file. We are creating a Button component and exporting 
+        that component. At the top of this file, you'll notice that we're
+        importing the button component. Every <Button /> is a placeholder for
+        all the code inside the render method of the button.js file.
+        
+Step 2: Create a loop from 0 to 16 in order to push sixteen buttons
+        to the buttons array. On each iteration, push a <Button /> component 
+        to that array — your page should now be displaying 16 buttons.
+        
+Step 3: Let's add some props for each button. Create a prop called id and assign 
+        to it the value of i. Your buttons array should now have 16 buttons each
+        with a unique id like so <Button id={i} />. Create a key prop and also
+        assign to it the value of i. 
+        
+Step 4: Create three more props: keyCode, keySymbol, and audioFile
         Assign to these props the current element from the this.state.keyCodes,
         this.state.keySymbols, and this.state.audioFiles arrays, respectively.
 
@@ -31,29 +41,12 @@ class App extends Component {
     this.state = {
       keyCodes: [49, 50, 51, 52, 81, 87, 69, 82, 65, 83, 68, 70, 90, 88, 67, 86],
       keySymbols: [1, 2, 3, 4, 'q', 'w', 'e', 'r', 'a', 's', 'd', 'f', 'z', 'x', 'c', 'v'],
-      audioFiles: [
-        "samples/clap.WAV",
-        "samples/closed-hat.WAV",
-        "samples/cowbell.WAV",
-        "samples/cymbal.WAV",
-        "samples/kick.WAV",
-        "samples/low-tom.WAV",
-        "samples/mid-tom.WAV",
-        "samples/high-tom.WAV",
-        "samples/open-hat.WAV",
-        "samples/snare.WAV",
-        "samples/bass-stab.WAV",
-        "samples/blip.WAV",
-        "samples/echo.WAV",
-        "samples/nomsayn.WAV",
-        "samples/pwa-pwa.WAV",
-        "samples/haht-of-venice.WAV",
-      ],
+      audioFiles: ["samples/clap.WAV", "samples/closed-hat.WAV", "samples/cowbell.WAV", "samples/cymbal.WAV", "samples/kick.WAV", "samples/low-tom.WAV", "samples/mid-tom.WAV", "samples/high-tom.WAV", "samples/open-hat.WAV", "samples/snare.WAV", "samples/bass-stab.WAV", "samples/blip.WAV", "samples/echo.WAV", "samples/nomsayn.WAV", "samples/pwa-pwa.WAV", "samples/haht-of-venice.WAV"],
     }
   }
 
   handleKeydown = (e) => {
-    let code = e.keyCode || e.target.children[1].id;   
+    let code = e.keyCode;  
     let audio = document.getElementById(code);
     if (!audio) return;
     audio.currentTime = 0;
@@ -62,13 +55,12 @@ class App extends Component {
 
   render() {
     window.addEventListener('keydown', this.handleKeydown);
-
+    
     // ******************
-    // INSERT CODE HERE
     const buttons = [];
+    // INSERT CODE HERE
 
     // ****************** 
-    
 
     return (
       <div className="button-container">

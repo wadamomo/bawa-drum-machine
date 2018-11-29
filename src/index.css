@@ -13,3 +13,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.button-container {
+  text-align: center;
+  width: 400px;
+}
+
+.button {
+  height: 75px;
+  width: 75px;
+  margin: 0.5em;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  background: linear-gradient(to top, rgb(255, 253, 131), rgb(255, 230, 0));
+  box-shadow: 3px 3px #ffd000;
+}
