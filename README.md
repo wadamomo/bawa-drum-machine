@@ -15,11 +15,10 @@ Then run:
 
 To get started with the challenge open up App.jsx inside src/components/App.jsx —— Good Luck! 
 
-🥁🎷🎹🎶🥁🎷🎹🎶🥁🎷🎹🎶
+🥁🎷🎹🎶🥁🎷🎹🎶🥁🎷🎹🎶🥁🎷🎹🎶🥁🎷🎹🎶🥁🎷🎹🎶
 
-🥁🎷🎹🎶🥁🎷🎹🎶🥁🎷🎹🎶
 
-🥁🎷🎹🎶🥁🎷🎹🎶🥁🎷🎹🎶
+
 
 If you get an eslint related error, follow the instructions to create a .env file.
 If you get a babel-core error, install yarn:
