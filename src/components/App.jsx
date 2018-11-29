@@ -3,6 +3,13 @@ import Button from './Button.jsx';
 
 /*
 
+Step 0: Once you npm start you should see a gray background. Familiarize
+        yourself with the code here. We have two components. An App.jsx 
+        file and a Button.jsx file. Look at each of those and think about
+        how we'll need those to interact. Notice that our App render function
+        has an event listener on the window object for any key press. Look at 
+        the handleKeydown function and think about how this is working?
+
 Step 1: To make sure everything is hooked up properly, first render a 
         <Button /> by putting one in the buttons array like so [<Button />]. 
         Now put a few more in there. How is this working? 🤔 Have a look
@@ -33,6 +40,15 @@ BONUS: Let's make our buttons work when we click on them. First, create a
        handleKeydown). Finally, back in App.js modify the line just below 
        handleKeydown and change it from "let code = e.keyCode;" to 
        "let code = e.keyCode || e.target.children[1].id"
+
+BONUS 2: Change the key mappings to different keys. How can we do this? Start
+        by console.logging some keyCodes. Try pressing different keys and getting
+        the key codes for those keys. Modify those properties in state to change
+        the key mappings. You'll also have to change some of the elements in the 
+        keySymbols array so the buttons show the correct mappings. Finally, you'll
+        notice that there are some other drum loops in the samples folder. Reassign
+        some of the keys to play some of those drum samples instead.
+
 */
 
 class App extends Component {
