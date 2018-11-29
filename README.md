@@ -13,7 +13,7 @@ Then run:
 
 ### `npm start`
 
-To get started with the challenge open up App.jsx inside src/components/App.jsx —— Good Luck! 
+To get started with the challenge open up App.jsx inside src/components/App.jsx — Good Luck! 
 
 🥁🎷🎹🎶🥁🎷🎹🎶🥁🎷🎹🎶
 

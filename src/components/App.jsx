@@ -9,9 +9,9 @@ Step 1: To make sure everything is hooked up properly, first render a
         at the Button.jsx file. We are creating a Button component and exporting 
         that component. At the top of this file, you'll notice that we're
         importing the button component. Every <Button /> is a placeholder for
-        all the code inside the render method of the button.js file.
+        all the code inside the render method of the Button.jsx file.
         
-Step 2: Create a loop from 0 to 16 in order to push sixteen buttons
+Step 2: Create a for loop from 0 to 16 in order to push sixteen buttons
         to the buttons array. On each iteration, push a <Button /> component 
         to that array — your page should now be displaying 16 buttons.
         
