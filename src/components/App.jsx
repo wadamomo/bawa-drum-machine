@@ -75,7 +75,18 @@ class App extends Component {
     // ******************
     const buttons = [];
     // INSERT CODE HERE
-
+    for (let i = 0; i < 16; i++) {
+      buttons.push(
+        <Button
+          id={i}
+          key={i}
+          keyCode={this.state.keyCodes[i]}
+          keySymbol={this.state.keySymbols[i]}
+          audioFile={this.state.audioFiles[i]}
+          handleKeydown={this.handleKeydown}
+        />
+      )
+    }
     // ****************** 
 
     return (
