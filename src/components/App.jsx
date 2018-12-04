@@ -41,13 +41,13 @@ BONUS: Let's make our buttons work when we click on them. First, create a
        handleKeydown and change it from "let code = e.keyCode;" to 
        "let code = e.keyCode || e.target.children[1].id"
 
-BONUS 2: Change the key mappings to different keys. How can we do this? Start
+BONUS 2: You'll notice that there are some other drum loops in the samples folder. 
+        Reassign some of the keys to play some of those drum samples instead.
+        First change the key mappings to different keys. How can we do this? Start
         by console.logging some keyCodes. Try pressing different keys and getting
         the key codes for those keys. Modify those properties in state to change
-        the key mappings. You'll also have to change some of the elements in the 
-        keySymbols array so the buttons show the correct mappings. Finally, you'll
-        notice that there are some other drum loops in the samples folder. Reassign
-        some of the keys to play some of those drum samples instead.
+        the mappings. You'll also have to change some of the elements in the 
+        keySymbols array so the buttons show the correct mappings. 
 
 */
 
@@ -75,18 +75,7 @@ class App extends Component {
     // ******************
     const buttons = [];
     // INSERT CODE HERE
-    for (let i = 0; i < 16; i++) {
-      buttons.push(
-        <Button
-          id={i}
-          key={i}
-          keyCode={this.state.keyCodes[i]}
-          keySymbol={this.state.keySymbols[i]}
-          audioFile={this.state.audioFiles[i]}
-          handleKeydown={this.handleKeydown}
-        />
-      )
-    }
+
     // ****************** 
 
     return (
